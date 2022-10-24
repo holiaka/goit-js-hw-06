@@ -1,22 +1,21 @@
 // Task 2
-console.log("\n\n TASK #2 \n")
-
+console.log("\n\n TASK #2 \n");
 
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const elementColection = []; 
+const elementColection = [];
 for (const ingredient of ingredients) {
-  const newListElement = document.createElement('li');
+  const newListElement = document.createElement("li");
   newListElement.textContent = ingredient;
-  newListElement.classList.add('item');
-  elementColection.push(newListElement);  
+  newListElement.classList.add("item");
+  elementColection.push(newListElement);
 }
 
 const workingList = document.querySelector("#ingredients");
