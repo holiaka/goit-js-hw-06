@@ -1,9 +1,11 @@
 // Task 6
 console.log("\n\n TASK #6 \n");
 
-const inputForColectionOfSymbols = document.querySelector("#validation-input");
+// Find HTML element
+const inputForColectionOfSymbolsRef = document.querySelector("#validation-input");
 
-inputForColectionOfSymbols.addEventListener(
+// Create event listener
+inputForColectionOfSymbolsRef.addEventListener(
   "blur",
   onDeterminationCorrectNumberOfSymbols
 );
@@ -11,12 +13,12 @@ inputForColectionOfSymbols.addEventListener(
 function onDeterminationCorrectNumberOfSymbols(evt) {
   if (
     evt.currentTarget.value.length ===
-    Number(inputForColectionOfSymbols.dataset.length)
+    Number(inputForColectionOfSymbolsRef.dataset.length)
   ) {
-    inputForColectionOfSymbols.classList.add("valid");
-    inputForColectionOfSymbols.classList.remove("invalid");
+    inputForColectionOfSymbolsRef.classList.add("valid");
+    inputForColectionOfSymbolsRef.classList.remove("invalid");
   } else {
-    inputForColectionOfSymbols.classList.add("invalid");
-    inputForColectionOfSymbols.classList.remove("valid");
+    inputForColectionOfSymbolsRef.classList.add("invalid");
+    inputForColectionOfSymbolsRef.classList.remove("valid");
   }
 }

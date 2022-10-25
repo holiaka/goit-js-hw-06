@@ -1,8 +1,10 @@
 // Task 8
 console.log("\n TASK #8 \n");
 
+// Find HTML element
 const logInFormRef = document.querySelector(".login-form");
 
+// Create event listener
 logInFormRef.addEventListener("submit", onfillOutForm);
 
 const dataUser = {};

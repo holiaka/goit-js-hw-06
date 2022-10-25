@@ -1,11 +1,13 @@
 // Task 7
 console.log("\n\n TASK #7 \n");
 
-const fontSizeScale = document.querySelector("#font-size-control");
-const differentSizeText = document.querySelector("#text");
+// Find collection of HTML elements
+const fontSizeScaleRef = document.querySelector("#font-size-control");
+const differentSizeTextRef = document.querySelector("#text");
 
-fontSizeScale.addEventListener("input", changeSizeText);
+// Create event listener
+fontSizeScaleRef.addEventListener("input", changeSizeText);
 
 function changeSizeText(evt) {
-  differentSizeText.style.fontSize = `${evt.currentTarget.value}px`;
+  differentSizeTextRef.style.fontSize = `${evt.currentTarget.value}px`;
 }
