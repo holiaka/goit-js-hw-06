@@ -28,9 +28,9 @@ placeForBoxList.style.display = 'flex';
 placeForBoxList.style.gap = '15px';
 placeForBoxList.style.flexWrap = "wrap";
 
+let size = 30;
 function createBoxes(amount) {
-  let html = [];
-  let size = 30;
+  let html = [];  
   for (let i = 0; i < amount; i++) {
     let code = `<div style="height: ${size}px; width: ${size}px; background-color: ${getRandomHexColor()}"></div>`;
     size += 10;
@@ -50,6 +50,7 @@ function onClickRemoveBlocks() {
 }
 
 function destroyBoxes() {
+  size = 30;
   placeForBoxList.innerHTML = "";
 }
 

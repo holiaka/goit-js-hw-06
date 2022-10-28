@@ -14,7 +14,7 @@ function onfillOutForm(evt) {
 
   const { email, password } = evt.currentTarget.elements;
 
-  if (email.value === "" && password.value === "") {
+  if (email.value === "" || password.value === "") {
     return alert("Attention!!!\nAll fields must be filled!!!");
   } else {
     dataUser.email = email.value;
