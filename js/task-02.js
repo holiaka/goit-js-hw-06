@@ -13,11 +13,12 @@ const ingredients = [
 // First version before mentor review
 
 const elementColection = [];
-for (const ingredient of ingredients) {
+for (const ingredient of ingredients) {  
   const newListElement = document.createElement("li");
-  newListElement.textContent = ingredient;
   newListElement.classList.add("item");
+  newListElement.textContent = ingredient;  
   elementColection.push(newListElement);
+  console.log(elementColection);
 }
 
 const workingList = document.querySelector("#ingredients");
@@ -29,15 +30,13 @@ workingList.append(...elementColection);
 
 // Second version after mentor review
 
-const newElement = document.createElement("li");
-newElement.classList.add("item");
-const elementList = ingredients.map(el => addText(el));
+const elementList = ingredients.map(el => {
+  const newElement = document.createElement("li");
+  newElement.classList.add("item");
+  newElement.textContent = el;
+  return newElement;
+});
 console.log(elementList)
 
-function addText(text) {
-  newElement.textContent = text;
-  return newElement;
-}
-
-const workingList2 = document.querySelector("#ingredients");
+const workingList2 = document.querySelector("#ingredients2");
 workingList2.append(...elementList)
